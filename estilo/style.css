@@ -1,169 +1,214 @@
 @charset "UTF-8";
-
+/*Trazendo uma fonte do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*Adicionar fontes personalizadas*/
 @font-face {
-  font-family: 'android';
-  src: url('../fontes/idroid.otf') format('opentype');
+      font-family: 'android';
+      src: url('../fontes/idroid.otf') format('opentype');
 }
 
-/*Variaveis de cores do projeto:*/
-:root{ --cor0:#c5ebd6;
-       --cor1:#83e1ad;
-       --cor2:#3ddc84;
-       --cor3:#2fa866;
-       --cor4:#1a5c37;
-       --cor5:#063d1e;
-     /*Fontes do projeto:*/
-       --fonte-padrao: arial, verdana, helvetica, sans-serif;
-       --fonte-destaque:'Bebas Neue', cursive;
-       --fonte-android:'android', cursive;}
+/*Variáveis de cores do projeto:*/
+:root {
+      --cor0: #c5ebd6;
+      --cor1: #83e1ad;
+      --cor2: #3ddc84;
+      --cor3: #2fa866;
+      --cor4: #1a5c37;
+      --cor5: #063d1e;
+/*Variáveis para Fontes do projeto:*/
+      --fonte-padrao: arial, verdana, helvetica, sans-serif;
+      --fonte-destaque: 'Bebas Neue', cursive;
+      --fonte-android: 'android', cursive;
+}
 
-/*Tirar  margens e borda de tudo*/
-*{ margin:0px;
-   padding:0px;}
-
-body{ background-color: var(--cor0);
-      font-family: var(--fonte-padrao); }
-
-a.externo::after{
+/*Tirar margens e borda de tudo*/
+* {
+      margin: 0px;
+      padding: 0px;
+}
+/*Reset de todos os elementos da página.*/
+body {
+      background-color: var(--cor0);
+      font-family: var(--fonte-padrao);
+}
+/*Adiciona um ícone de link*/
+a.externo::after {
       content: '\00A0\1F517';
-}      
+}
 
-
-header{ background-image: linear-gradient(to bottom,var(--cor3),var(--cor5));
-        min-height: 150px;
-        text-align: center;
-        padding-top: 40px;}  
-
-header > h1 {color:white;
-             font-family: var(--fonte-destaque);
-             font-size: 3em;
-             font-weight: normal;
-             margin-bottom: 20px; 
-             text-shadow: 2px 2px 0px rgb(0, 0, 0, 0.267);}     
-
-header > p {font-family:var(--fonte-padrao);
-            font-size: 1.2em;
-            color:white;
-            max-width: 600px;
-            padding-right: 10px;
-            padding-left: 10px;
-            margin: auto;
-            padding-bottom:30px;
-            text-shadow: 2px 2px 0px rgb(0, 0, 0, 0.315);}
-
-nav {background-color: var(--cor5);
-    padding: 10px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);}
-
-    nav > a{
-        color:var(--cor1);
-        padding: 10px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        transition-duration: 0.5s;
-    }
- 
-    nav >a:hover{ background-color: var(--cor3);
-                  color: var(--cor5);}
-
-main{ min-width: 300px;
-      max-width:1000px;
+/* Estiliza o header com gradiente, altura mínima e centraliza texto */
+header {
+      background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+      min-height: 150px;
+      text-align: center;
+      padding-top: 40px;
+}
+/* Estiliza o título principal do header: fonte destaque, texto branco e sombra para melhor legibilidade */
+header>h1 {
+      color: white;
+      font-family: var(--fonte-destaque);
+      font-size: 3em;
+      font-weight: normal;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 0px rgb(0, 0, 0, 0.267);
+}
+/* Estiliza o parágrafo no header com fonte padrão, texto branco, sombra para legibilidade e centralização com limite de largura */
+header>p {
+      font-family: var(--fonte-padrao);
+      font-size: 1.2em;
+      color: white;
+      max-width: 600px;
+      padding-right: 10px;
+      padding-left: 10px;
+      margin: auto;
+      padding-bottom: 30px;
+      text-shadow: 2px 2px 0px rgb(0, 0, 0, 0.315);
+}
+/* Estiliza a barra de navegação com fundo escuro, espaçamento interno e sombra para destaque */
+nav {
+      background-color: var(--cor5);
+      padding: 10px;
+      box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+}
+/* Estiliza os links */
+nav>a {
+      color: var(--cor1);
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition-duration: 0.5s;
+}
+/* Aplica efeito visual nos links do menu ao passar o mouse: */
+nav>a:hover {
+      background-color: var(--cor3);
+      color: var(--cor5);
+}
+/* Centraliza o main, define largura mínima e máxima, 
+   adiciona fundo branco, sombra e cantos arredondados embaixo */
+main {
+      min-width: 300px;
+      max-width: 1000px;
       margin: auto;
       margin-bottom: 30px;
       padding: 20px;
       background-color: white;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
       border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;}
-
-main h1{color:var(--cor5);
+      border-bottom-right-radius: 10px;
+}
+/* Estiliza o título h1 dentro do main com cor, fonte personalizada, peso normal e tamanho maior */
+main h1 {
+      color: var(--cor5);
       font-family: var(--fonte-android);
       font-weight: normal;
-      font-size: 1.8em;}
-
-main h2 {font-family: var(--fonte-android);
-         color:var(--cor4);
-         font-size: 1.3em;
-         font-weight: normal;
-         background-image: linear-gradient(to right, var(--cor1),transparent);
-      }
-
-main p{
+      font-size: 1.8em;
+}
+/* Estiliza o título h2 dentro do main com fonte personalizada, cor, tamanho e um gradiente de fundo */
+main h2 {
+      font-family: var(--fonte-android);
+      color: var(--cor4);
+      font-size: 1.3em;
+      font-weight: normal;
+      background-image: linear-gradient(to right, var(--cor1), transparent);
+}
+/* Ajusta o parágrafo dentro do main com espaçamento, alinhamento justificado, 
+   indentação na primeira linha, tamanho e altura da linha */
+main p {
       margin: 15px 0px;
       text-align: justify;
       text-indent: 30px;
       font-size: 1em;
       line-height: 2em;
-      }
-main strong {color: var(--cor4);
-             font-weight: bold;}
-
-main a{
+}
+/* Destaca o texto em <strong> dentro do main com cor e negrito */
+main strong {
+      color: var(--cor4);
+      font-weight: bold;
+}
+/* Estiliza os links dentro do main: remove sublinhado, deixa negrito, adiciona fundo colorido e padding */
+main a {
       text-decoration: none;
       font-weight: bold;
       background-color: var(--cor1);
-      padding: 2px 6px;}
-
-main a:hover{
+      padding: 2px 6px;
+}
+/* No hover, sublinha o link e muda a cor */
+main a:hover {
       text-decoration: underline;
-      color:var(--cor4)
-}     
+      color: var(--cor4)
+}
 
-      
-main img {width: 100%;}
+/* Faz a imagem dentro do main ocupar toda a largura do container */
+main img {
+      width: 100%;
+}
+/* Ajusta imagens com a classe "pequena" para terem largura máxima de 350px,
+   são exibidas como bloco e centralizadas horizontalmente */
+main img.pequena {
+      max-width: 350px;
+      display: block;
+      margin: auto;
+}
+/* Estiliza a div .video com fundo escuro, margem negativa lateral para esticar,
+   espaçamento interno e padding inferior para controlar altura, usando position relative */
 
-main img.pequena{ max-width: 350px;
-                  display: block;
-                  margin: auto;}
-
-div.video{
+div.video {
       background-color: var(--cor5);
       margin: 0px -20px 30px -20px;
       padding: 20px;
       padding-bottom: 58%;
-      position: relative;}
-
-div.video > iframe{
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-}      
-
-aside{
+      position: relative;
+}
+/* Posiciona o iframe dentro da div.video de forma absoluta,
+   com margens internas de 5% e ocupa 90% da largura e altura do container */
+div.video>iframe {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 90%;
+      height: 90%;
+}
+/* Estiliza o aside com fundo colorido, espaçamento interno e cantos arredondados */
+aside {
       background-color: var(--cor1);
       padding: 10px;
-      border-radius: 10px;}
-      
-aside > ul{
+      border-radius: 10px;
+}
+/* Define lista no aside com marcador personalizado (✔), 
+   marcador dentro do texto e divide a lista em 2 colunas */
+aside>ul {
       list-style-type: '\2714\00A0\00A0';
       list-style-position: inside;
       columns: 2;
-} 
-
-aside h3{
+}
+/* Estiliza o título h3 do aside com fundo colorido, texto branco, padding, 
+   margem negativa para ajustar espaçamento, cantos arredondados no topo e sombra */
+aside h3 {
       background-color: var(--cor4);
       color: white;
       padding: 10px;
-      margin:-10px -10px 0px -10px;
+      margin: -10px -10px 0px -10px;
       border-radius: 10px 10px 0px 0px;
       box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
 }
 
-footer{background-color: var(--cor5);
-       color:white;
+footer {
+      background-color: var(--cor5);
+      color: white;
       text-align: center;
       font-size: 0.8em;
-      padding: 15px;}
-
-footer a{
+      padding: 15px;
+}
+/* Estiliza o rodapé com fundo escuro, texto branco, centralizado e espaçamento interno */
+footer a {
       color: white;
       font-weight: bolder;
       text-decoration: none;
 }
-
-footer a:hover{text-decoration: underline;
-               color: var(--cor1);}
+/* Ao passar o mouse sobre links no footer, sublinha o texto e muda a cor para var(--cor1) */
+footer a:hover {
+      text-decoration: underline;
+      color: var(--cor1);
+}
